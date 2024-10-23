@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        green: '#01B22E',
+                        bgGreen: '#D6F1E3',
+                        textColor: '#948DAA',
+                        staleBlue: '#7371F9'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class="h-screen flex flex-col items-center">
+        <nav class="container mx-auto flex justify-between h-28 items-center">
+            <img class="w-48 h-10" src="./img/Dreamer-logo.png" alt="">
+            <div class="flex gap-5 font-bold">
+                <button class="text-xl hover:text-blue-600">Home</button>
+                <button class="text-xl hover:text-blue-600">About</button>
+                <button class="text-xl hover:text-blue-600">Portfolios</button>
+                <button class="text-xl hover:text-blue-600">Service</button>
+                <button class="text-xl hover:text-blue-600">Testimonials</button>
+                <button class="text-xl hover:text-blue-600">Contact</button>
+            </div>
+        </nav>
+        <section class="container mx-auto min-h-[70%] place-content-center flex justify-between items-center">
+            <div class="w-[60%] space-y-3">
+                <h4 class="text-2xl font-medium">Hello, My name is</h4>
+                <h3 class="text-7xl font-bold">Sazzad <span>Hossain</span></h3>
+                <h4 class="text-3xl text-textColor">A passionate <span class="font-bold">freelancer</span> who works on
+                </h4>
+                <h2 class="text-5xl text-green font-bold">UpWork, Freelancer, Fiverr.</h2>
+            </div>
+            <div class="w-[40%] flex justify-center">
+                <div class="image-container profile-img">
+                    <!-- <img class="w-72 h-72" src="./img/profile.jpg" alt=""> -->
+                    <div class="rotate-images">
+                        <img class="border-image ai" src="./img/icons/ai.png" alt="">
+                        <img class="border-image figma" src="./img/icons/figma.png" alt="">
+                        <img class="border-image fiverr" src="./img/icons/fiverr.png" alt="">
+                        <img class="border-image wordpress" src="./img/icons/wordpress.png" alt="">
+                        <img class="border-image upwork" src="./img/icons/upwork.png" alt="">
+                        <img class="border-image ps" src="./img/icons/ps.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <!-- <div class="border">
+            <img src="./img/icons/ai.png" class="border-image">
+            <img src="./img/icons/fiverr.png" class="border-image">
+            <img src="./img/icons/upwork.png" class="border-image">
+            <img src="./img/icons/wordpress.png" class="border-image">
+        </div> -->
+    </main>
+    <footer>
+
+    </footer>
+
+    <script>
+        const images = document.querySelectorAll('.border-image');
+        const totalImages = images.length;
+
+        images.forEach((img, index) => {
+            img.style.animationDelay = `${index * (8 / totalImages)}s`;
+        });
+
+    </script>
+</body>
+
+</html>
